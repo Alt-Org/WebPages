@@ -74,6 +74,11 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  color: var(--primary-color);
+  cursor: pointer;
+  &:hover {
+    color: var(--secondary-color);
+  }
 }
 
 .disabled {
@@ -89,4 +94,5 @@
 
 .active {
   color: var(--secondary-color) !important;
+  text-decoration: underline;
 }

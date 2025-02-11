@@ -132,13 +132,13 @@ export const DropdownWrapper = (props: DropdownWrapperProps) => {
                     onClick={!isDisabled?.status ? toggleDropdown : undefined}
                     role="button"
                     title={isDisabled?.status ? isDisabled?.reason : ''}
-                    className={classNames(cls.childrenWrapper, {}, [
+                    className={classNames(cls.childrenWrapper, { [cls.active]: isOpen }, [
                         childrenWrapperClassName,
                         mainElementClass,
                     ])}
                 >
                     {children}
-                    <span
+                    {/* <span
                         style={{
                             display: 'inline-block',
                             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -151,7 +151,7 @@ export const DropdownWrapper = (props: DropdownWrapperProps) => {
                             src={chevronDown}
                             className={cls.chevronImage}
                         />
-                    </span>
+                    </span> */}
                 </div>
             )}
             {shouldRender && (
